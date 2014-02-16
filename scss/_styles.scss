@@ -1,0 +1,150 @@
+/* VARIABLES */
+
+$primary-blue: #358CF2;
+$secondary-blue: #153860;
+$primary-darkgray: #666666;
+$primary-gray: #e3e7ed;
+$white: #FFF;
+$font: 'Varela Round', sans-serif;
+
+
+
+/* MIXINS */
+@mixin transition($color) {
+	-webkit-transition:$color .3s ease-in;
+	-moz-transition:$color .3s ease-in;
+ 	-o-transition:$color .3s ease-in;
+ 	transition:$color .3s ease-in;
+}
+::selection {color:$secondary-blue;background:rgba(240,240,240, .1);}
+::-moz-selection {color:$secondary-blue;background:rgba(240,240,240, .1);}
+
+body{
+	background-image: url(../images/wave.jpg);
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-color: $primary-blue;
+	font-family: $font;	
+	background-repeat: no-repeat;
+}
+h1, h2, h3, h4, h5, h5, a, li, input, p{
+	font-family: $font;
+	text-shadow: rgba(50,50,50,0.5) 0px 2px 2px;
+}
+
+/* HOME */
+#cards-container{
+	height: 700px;
+	background-size: 337px 108px;
+	overflow: hidden;
+	background-image: url(../images/noxu.png);
+	background-repeat: no-repeat;
+	background-position: 0px 300px;
+
+	#definition-text{
+		font-size: 1.4em;
+	}
+	h1{
+		text-shadow: rgba(50,50,50,0.5) 0px 2px 2px;
+	}
+
+}
+#nav-container{
+	h5{
+		transition: opacity 2s ease-in;
+    	-moz-transition: opacity 2s ease-in;
+    	-webkit-transition: opacity 2s ease-in;
+    	opacity: 0;
+    	a{
+	    	color: $white; 
+	    	@include transition(color);
+	    	&:hover{
+	    		color:$secondary-blue;
+	    	}
+	    	&:active{
+	    		color:$primary-blue;
+	    	}
+	    }
+	}
+	#h5projects{
+		position: absolute;
+		top: 10px;
+		left: 292px;
+		font-family: $font;
+		text-shadow: rgba(50,50,50,0.5) 0px 1px 1px;
+	}
+	#h5contact{
+		position: absolute;
+		top: 10px;
+		right: 300px;
+		font-family: $font;
+		text-shadow: rgba(50,50,50,0.5) 0px 1px 1px;
+	}
+	#logo{
+	height: 60px;
+	width: 70px;
+	background-color: rgba(21,56,96, .8);
+	transition:width .5s ease-in;
+	-webkit-transition:width .5s ease-in;
+	}
+	#logo-image{
+	width: 40px;
+	height: 40px;
+	margin-top: 8px;
+	margin-left: 2px;
+	}
+	#logo-image-text{
+		position: absolute;
+		bottom: 70px;
+		right: 10px;
+		opacity: 0;
+	    transition: opacity 1s ease-in;
+	    -moz-transition: opacity 1s ease-in;
+	    -webkit-transition: opacity 1s ease-in;
+	    transition-property: bottom;
+        transition-duration: 0.5s;
+	    -webkit-transition-property: bottom;
+        -webkit-transition-duration: 0.5s;
+	    transition-delay: .3s;
+		-webkit-transition-delay: .3s;
+		-moz-transition-delay: .3s;
+	}
+
+	&:hover{
+		h5{
+			opacity: 1;
+		}
+		#logo{
+			width: 150px;
+		}
+		#logo-image-text{
+			position: absolute;
+			bottom: 6px;
+			opacity: 1;
+		}
+	}
+}
+
+/* EFFECTS */
+.white{
+	color: $white;
+}
+.gray{
+	color: $primary-gray;
+}
+.darkgray{
+	color: $primary-darkgray;
+}
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in;
+   -moz-transition: opacity .25s ease-in;
+   -webkit-transition: opacity .25s ease-in;
+
+   &:hover{
+      opacity: 0.5;
+      }
+   }
+
