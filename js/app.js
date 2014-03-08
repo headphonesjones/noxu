@@ -2,10 +2,20 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-$("#ryan-info").hover(
+$('#home-definition-title').addClass('animated fadeInDown');
+$('#definition-text').addClass('animated fadeInRight');
+$('#logo-image').on
+
+$( "#nav-container" ).hover(
   function() {
-    $(this).addClass( "hover-box" );
+  	$('#h5projects').removeClass('animated fadeOutUp');
+    $('#h5contact').removeClass('animated fadeOutUp');
+    $('#h5projects').addClass('animated fadeInDown');
+    $('#h5contact').addClass('animated fadeInDown');
   }, function() {
-    $(this).removeClass( "hover-box" );
+    $('#h5projects').removeClass('animated fadeInDown');
+    $('#h5contact').removeClass('animated fadeInDown');
+    $('#h5projects').addClass('animated fadeOutUp');
+    $('#h5contact').addClass('animated fadeOutUp');
   }
 );
